@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="/static/js/script.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#entryButton').click(function(){
+        if( $('#entryButton').prop('disabled') ) { 
+          alert('No need to click, it\'s disabled.');
+        } 
+      });
+    });
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecWebProject</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__brand">
+      <img class="navbar__logo__univ" src="/static/logo_univ.png" alt="The Microblog logo" />TecWeb BLOG
+    </div>
+    <ul class="navbar__navigation">
+      <li class="navbar__navigation-item">
+        <a href="documentations" class="navbar__link">Documentation</a>
+      </li>
+    </ul>
+  </header>
+  <main class="main">
+    <section>
+      <h1>Add new entry</h1>
+      <form class="form" method="POST">
+        <p class="form__input">
+          <label for="entry" class="form__label">Entry contents:</label>
+          <textarea name="content" id="entry" onkeyup="success()" class="form__textarea"></textarea>
+        </p>        
+        <button id="entryButton" class="form__submit_my" disabled>Add entry</button>
+      </form>
+    </section>
+    <section>
+      <h1>Recent posts</h1>
+      {% for entry in entries %}
+        <article class="entry">
+          <div>
+            <h2 id="addEntries" class="entry__title">{{ entry[0] | truncate(30, true) }}</h2>
+            <time class="entry__date" datetime="{{ entry[1] }}">• {{ entry[2] }}</time>
+          </div>
+          <p class="entry__content" id="entryContent">
+            {{ entry[0] }}
+          </p>
+        </article>
+      {% endfor %}
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <section class="left">
+        <a class="footer__item" target="_blank" href="https://www.linkedin.com/in/alessio-di-nardo-21b952136">Made by Alessio Di Nardo</a>
+        <a class="matricola isDisabled">Matricola: 0124002241</a>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

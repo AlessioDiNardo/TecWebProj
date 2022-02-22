@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--SCRIPT JS-->
+  <script type="text/javascript" src="/static/js/script.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#myInput').click(function(){
+          alert('If the technology is not present, the table will be empty!');
+         
+      });
+    });
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentations</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<div style="font-weight: bold; font-size: larger;" class="headerDoc">
+   <a class="headerDoc">Documentations</a>
+   <button style="position: absolute; right: 10px; top: 14px;" class="form__submit_my" onclick="history.back()">Go Back</button>
+ </div>
+ <div style="padding-left:20px">
+   <p>In this section you will find the documentation related to the technologies used with their official links.</p>
+ </div>
+<body>
+<div style="margin-left: 30px;">      
+    <input class="inputCss" type="text" id="myInput" onkeyup="myFilter()" placeholder="Search for Technology..">
+      <table id="myTable" class="paleBlueRows">
+        <thead>
+           <tr>
+              <th>Develop</th>
+              <th>Technology</th>
+              <th>Documentation</th>
+           </tr>
+        </thead>
+        <tbody>
+           <tr>
+              <td>Front-End</td>
+              <td>Javascript</td>
+              <td><a target="_blank" href="https://www.javascript.com/">www.javascript.com</a></td>
+           </tr>
+           <tr>
+            <td>Front-End</td>
+            <td>jQuery</td>
+            <td><a target="_blank" href="https://jquery.com/">www.jquery.com</a></td>
+         </tr>
+           <tr>
+              <td>Front-End</td>
+              <td>HTML</td>
+              <td><a target="_blank" href="https://www.html.it/">www.html.it</a></td>
+           </tr>
+           <tr>
+              <td>Front-End</td>
+              <td>CSS</td>
+              <td><a target="_blank" href="https://www.w3schools.com/css/">www.w3schools.com/css</a></td>
+           </tr>
+           <tr>
+              <td>Database</td>
+              <td>MongoDB</td>
+              <td><a target="_blank" href="https://www.mongodb.com/">www.mongodb.com</a></td>
+           </tr>
+           <tr>
+              <td>Back-End</td>
+              <td>Python</td>
+              <td><a target="_blank" href="https://www.python.org/">www.python.org</a></td>
+           </tr>
+           <tr>
+              <td>Back-End</td>
+              <td>Flask</td>
+              <td><a target="_blank" href="https://flask.palletsprojects.com/en/2.0.x/">www.flask.com</a></td>
+           </tr>
+        </tbody>
+        </tr>
+     </table>
+</div>
+</body>
+
+
+</html>
